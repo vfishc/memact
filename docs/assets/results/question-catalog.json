@@ -1,0 +1,219 @@
+[
+  {
+    "family": "Current",
+    "template": "approached object category",
+    "question": "What is the category whose object had the largest decrease in camera-to-3D-center distance among objects visible both now and 5 seconds ago? Choose from the listed options.",
+    "answer": "storage unit.",
+    "construction": "Compare objects visible at both endpoints. Require a distance decrease of at least 0.20 m and a 0.10 m lead over the runner-up."
+  },
+  {
+    "family": "Current",
+    "template": "became visible category",
+    "question": "Select the option that identifies the category that became visible between 5 seconds ago and now.",
+    "answer": "plant.",
+    "construction": "Take the difference between endpoint category sets and require one newly visible category."
+  },
+  {
+    "family": "Current",
+    "template": "camera motion bucket",
+    "question": "What is the range of the camera's straight-line endpoint displacement over the last 5 seconds? Choose from the listed options.",
+    "answer": "almost stationary (at most 0.2 meters).",
+    "construction": "Discretize straight-line camera endpoint displacement, excluding ambiguous interval boundaries."
+  },
+  {
+    "family": "Current",
+    "template": "camera path length m",
+    "question": "Estimate the total length of the camera's trajectory over the last 5 seconds. Answer in meters.",
+    "answer": "0.0.",
+    "construction": "Sum Euclidean translations between consecutive camera positions in the specified window."
+  },
+  {
+    "family": "Current",
+    "template": "camera rotation deg",
+    "question": "Provide your numerical estimate of the net difference between the camera's starting and ending orientations over the last 5 seconds. Answer in degrees.",
+    "answer": "120.0.",
+    "construction": "Compute net rotation between endpoint camera orientations, expressed in degrees."
+  },
+  {
+    "family": "Current",
+    "template": "camera to object distance bucket",
+    "question": "What is the camera-to-3D-center distance range for the closest visible sofa? Choose from the listed options.",
+    "answer": "very near (at most 1.25 meters).",
+    "construction": "Bind the nearest visible instance of the named category and discretize its center distance to the camera."
+  },
+  {
+    "family": "Current",
+    "template": "camera to object distance m",
+    "question": "Give a numerical value for the camera-to-3D-center distance to the closest visible sofa. Answer in meters.",
+    "answer": "1.06.",
+    "construction": "Bind the nearest visible instance of the named category and compute its center distance to the camera."
+  },
+  {
+    "family": "Current",
+    "template": "closer than before",
+    "question": "Select the option that identifies the change in camera-to-3D-center distance to the table over the last 5 seconds, considering the object visible at both times.",
+    "answer": "much closer (decrease of at least 0.75 meters).",
+    "construction": "Uniquely match the category referent across the two observations and classify its camera-distance change."
+  },
+  {
+    "family": "Current",
+    "template": "closest category then distance",
+    "question": "Choose the answer corresponding to the category of the currently visible object closest to the camera by 3D center distance.",
+    "answer": "sofa.",
+    "construction": "First identify the nearest visible category; then query the distance interval of the same object. Count both QA turns."
+  },
+  {
+    "family": "Current",
+    "template": "closest category then relation",
+    "question": "Determine the category of the currently visible object closest to the camera by 3D center distance and select the matching choice.",
+    "answer": "sofa.",
+    "construction": "First bind the nearest visible object; then identify its nearest neighbor among currently co-visible objects."
+  },
+  {
+    "family": "Current",
+    "template": "closest neighbor category",
+    "question": "Which option describes the listed category whose currently visible object has its 3D center closest to the cabinet?",
+    "answer": "bed.",
+    "construction": "Require visibility at the question frame and its adjacent frames for offline stability selection, and unique category referents; the nearest two candidates must differ by at least 0.40 m."
+  },
+  {
+    "family": "Current",
+    "template": "closest object category",
+    "question": "Choose the answer corresponding to the category of the currently visible object closest to the camera by 3D center distance.",
+    "answer": "sofa.",
+    "construction": "Rank currently visible objects by camera-to-center distance; require a nearest-candidate margin of 0.15 m."
+  },
+  {
+    "family": "Current",
+    "template": "disappeared category",
+    "question": "From the options below, indicate the category that disappeared from view between 5 seconds ago and now.",
+    "answer": "sofa.",
+    "construction": "Take the reverse endpoint category-set difference and require one disappeared category."
+  },
+  {
+    "family": "Current",
+    "template": "fixed reference relation",
+    "question": "From the options below, indicate the listed category whose currently visible object is to the left of the desk in the image at the time of this question.",
+    "answer": "double bed.",
+    "construction": "Use projected image positions with unique referents; select a same-row left/right relation and place distractors on the opposite side."
+  },
+  {
+    "family": "Current",
+    "template": "multi candidate height",
+    "question": "Which option describes the listed category whose currently visible object has the greatest vertical height (not elevation above the floor)?",
+    "answer": "wardrobe.",
+    "construction": "Compare world-vertical bounding-box extents of four distinct-category candidates; require a 0.30 m gap between the tallest two."
+  },
+  {
+    "family": "Current",
+    "template": "object category then later visibility",
+    "question": "Determine the category of the currently visible object closest to the camera by 3D center distance and select the matching choice.",
+    "answer": "media unit.",
+    "construction": "Bind a category/object in the first turn and ask about its visibility only after the later observation arrives."
+  },
+  {
+    "family": "Current",
+    "template": "object relative to camera",
+    "question": "Which option describes the direction of the closest visible bed relative to the camera now?",
+    "answer": "far to the right.",
+    "construction": "Transform the bound object center into the current camera frame and assign the corresponding direction category."
+  },
+  {
+    "family": "Current",
+    "template": "room floor area",
+    "question": "Calculate the total floor-footprint area of the room just surveyed that the camera is currently inside, including floor beneath furniture from the observations. Answer in square meters.",
+    "answer": "8.43.",
+    "construction": "Compute the valid room floor-polygon area. Require at least eight frames, 90 percent boundary-angular coverage, and a 150-degree heading span."
+  },
+  {
+    "family": "Memory",
+    "template": "first appearance order",
+    "question": "Identify the first-observation order of the categories armchair, dining table, storage unit since this episode began by selecting an option.",
+    "answer": "storage unit → dining table → armchair.",
+    "construction": "Sort three category-first-observation times, separated by at least two seconds and preceding the current window."
+  },
+  {
+    "family": "Memory",
+    "template": "first seen category then timestamp",
+    "question": "Determine the category seen earliest among the listed choices so far in this episode and select the matching choice.",
+    "answer": "lighting.",
+    "construction": "Identify the earliest category among the options, then query its original first-observation timestamp."
+  },
+  {
+    "family": "Memory",
+    "template": "first seen object category",
+    "question": "Among the choices, which one gives the category seen earliest among the listed choices so far in this episode?",
+    "answer": "lighting.",
+    "construction": "Compare first-observation times of the listed categories; require a unique earliest option before the current window."
+  },
+  {
+    "family": "Memory",
+    "template": "first seen timestamp s",
+    "question": "Estimate the first-seen timestamp of the lighting category, measured from the start of this episode. Answer in seconds.",
+    "answer": "0.0.",
+    "construction": "Return the earliest observed timestamp for the category over the complete causal prefix."
+  },
+  {
+    "family": "Memory",
+    "template": "historical coappearance category",
+    "question": "Choose the answer corresponding to the listed category also visible alongside the lighting at timestamp 3 seconds.",
+    "answer": "cabinet.",
+    "construction": "Use the explicitly referenced historical frame; the correct category is co-visible with the anchor and distractors are absent."
+  },
+  {
+    "family": "Memory",
+    "template": "historical relative direction",
+    "question": "From the options below, indicate the image-plane position of the storage unit relative to the table in the observation at timestamp 44 seconds.",
+    "answer": "left.",
+    "construction": "Use uniquely bound objects in the historical frame and their same-row or same-column image-plane relationship."
+  },
+  {
+    "family": "Memory",
+    "template": "last seen timestamp",
+    "question": "Report the last timestamp at which the lighting category was observed before this question as a number. Answer in seconds.",
+    "answer": "44.0.",
+    "construction": "Take the last occurrence before the question; require current absence and an occurrence preceding the pending write window."
+  },
+  {
+    "family": "Memory",
+    "template": "seen count by category",
+    "question": "Report the number of distinct table objects observed so far in this episode as a number. Answer with an integer count (objects).",
+    "answer": "4.",
+    "construction": "Union visible instance IDs over the prefix; require historical write coverage and that the current view does not contain all counted instances."
+  },
+  {
+    "family": "Memory",
+    "template": "single seen object then closest category",
+    "question": "Choose the answer corresponding to the category nearest to that lighting by 3D center distance, among the other objects visible at timestamp 0 seconds alongside the lighting seen earlier and absent now.",
+    "answer": "table.",
+    "construction": "Bind the only previously observed instance of the target category, absent now; find its nearest co-visible historical neighbor."
+  },
+  {
+    "family": "Memory",
+    "template": "single seen object then closest distance",
+    "question": "What is the 3D center distance from that lighting to its nearest neighbor, among the other objects visible at timestamp 0 seconds alongside the lighting seen earlier and absent now? Answer in meters.",
+    "answer": "0.776.",
+    "construction": "Use the same historical target binding and return its minimum center distance to another object visible in the referenced frame."
+  },
+  {
+    "family": "Action",
+    "template": "object size m",
+    "question": "Estimate the longest physical side length of the 3D bounding box of the drawer chest / corner cabinet visible in the initial view. Answer in meters.",
+    "answer": "1.185.",
+    "construction": "Use source physical dimensions or transformed mesh bounding-box dimensions to obtain the longest physical side in meters; hold the bound object fixed across views."
+  },
+  {
+    "family": "Action",
+    "template": "object to object distance bucket",
+    "question": "Identify the 3D center-to-center distance range between the sofa in the middle left of the initial view and the table in the lower left of the initial view by selecting an option.",
+    "answer": "near (1 to 1.75 meters).",
+    "construction": "Map the bound pair's center distance to an unambiguous interval; require evidence for both objects."
+  },
+  {
+    "family": "Action",
+    "template": "object to object distance m",
+    "question": "Report the 3D center-to-center distance between the sofa in the lower left of the initial view and the chair visible in the initial view as a number. Answer in meters.",
+    "answer": "3.041.",
+    "construction": "Compute the Euclidean distance between the bound 3D centers; retain the same pair throughout the action path."
+  }
+]

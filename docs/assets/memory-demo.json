@@ -1,0 +1,55 @@
+{
+  "title": "Dining objects leave the field of view",
+  "timestamps": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "observations": [
+    {
+      "frame": "f000000",
+      "objects": [
+        {
+          "category": "dining chair",
+          "count": 4
+        },
+        {
+          "category": "dining table",
+          "count": 1
+        },
+        {
+          "category": "pendant lamp",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "frame": "f000001",
+      "objects": [
+        {
+          "category": "dining chair",
+          "count": 1
+        },
+        {
+          "category": "dining table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "frame": "f000002",
+      "objects": []
+    },
+    {
+      "frame": "f000003",
+      "objects": []
+    },
+    {
+      "frame": "f000004",
+      "objects": []
+    }
+  ],
+  "scope": "Illustrative annotated memory-write example, not a live model run"
+}

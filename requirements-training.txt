@@ -1,0 +1,7 @@
+-r requirements-core.txt
+torch==2.5.1
+peft==0.19.1
+accelerate==1.14.0
+safetensors==0.8.0
+decord==0.6.0
+transformers @ git+https://github.com/huggingface/transformers.git@498d6e984e84d29186e671656817a53a024af930

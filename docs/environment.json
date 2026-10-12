@@ -1,0 +1,40 @@
+{
+  "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+  "packages": {
+    "torch": {
+      "version": "2.5.1+cu121",
+      "commit_id": null
+    },
+    "transformers": {
+      "version": "5.14.0.dev0",
+      "commit_id": "498d6e984e84d29186e671656817a53a024af930"
+    },
+    "peft": {
+      "version": "0.19.1",
+      "commit_id": null
+    },
+    "numpy": {
+      "version": "2.4.4",
+      "commit_id": null
+    },
+    "Pillow": {
+      "version": "12.2.0",
+      "commit_id": null
+    },
+    "opencv-python": {
+      "installed": false
+    },
+    "decord": {
+      "version": "0.6.0",
+      "commit_id": null
+    },
+    "accelerate": {
+      "version": "1.14.0",
+      "commit_id": null
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "commit_id": null
+    }
+  }
+}

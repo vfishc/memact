@@ -1,0 +1,74 @@
+{
+  "training_qa": 1000000,
+  "by_source": {
+    "real_arkit": {
+      "current": 116526,
+      "memory": 124047
+    },
+    "real_scannet": {
+      "current": 31304,
+      "memory": 30431
+    },
+    "real_scannetpp": {
+      "current": 19160,
+      "memory": 29201
+    },
+    "sim_front3d": {
+      "current": 135671,
+      "memory": 218983,
+      "action": 294677
+    }
+  },
+  "passive_templates": {
+    "camera_to_object_distance_m": 18748,
+    "closest_object_category": 18732,
+    "closest_category_then_relation": 18804,
+    "became_visible_category": 18733,
+    "camera_motion_bucket": 18733,
+    "camera_path_length_m": 18764,
+    "object_relative_to_camera": 18732,
+    "closest_category_then_distance": 18852,
+    "disappeared_category": 18732,
+    "approached_object_category": 18733,
+    "first_seen_object_category": 17133,
+    "first_seen_timestamp_s": 17133,
+    "first_seen_category_then_timestamp": 34266,
+    "single_seen_object_then_closest_category": 44256,
+    "single_seen_object_then_closest_distance": 44256,
+    "seen_count_by_category": 22506,
+    "closer_than_before": 18733,
+    "camera_to_object_distance_bucket": 18733,
+    "object_category_then_later_visibility": 18732,
+    "camera_rotation_deg": 18771,
+    "closest_neighbor_category": 18739,
+    "last_seen_timestamp": 67383,
+    "historical_coappearance_category": 65162,
+    "first_appearance_order": 66198,
+    "historical_relative_direction": 24369,
+    "room_floor_area": 18732,
+    "multi_candidate_height": 1167,
+    "fixed_reference_relation": 1491
+  },
+  "passive_streams": 50090,
+  "action_training_items": 294677,
+  "action_source_episodes": 10500,
+  "source_qualified_scene_ids": {
+    "real_arkit": 4627,
+    "real_scannet": 1360,
+    "real_scannetpp": 750,
+    "sim_front3d": 4447
+  },
+  "passive_max_tokens": 178705,
+  "memory_write_targets": 519948,
+  "memory_retrieval_calls": 556635,
+  "action_lengths": {
+    "1": 123752,
+    "2": 101775,
+    "3": 69150
+  },
+  "camera_transitions": 534752,
+  "rl_tasks": 14001,
+  "evaluation_main": 20000,
+  "evaluation_timing": 2000,
+  "physical_groups": "not guaranteed disjoint; existing audit retained; membership unchanged"
+}
