@@ -20,3 +20,5 @@ body{font-family:'Source Sans 3',sans-serif;font-size:17px}h1,h2,h3,.wordmark,.s
 @media(max-width:620px){.header{height:auto;min-height:86px;flex-wrap:wrap;padding-block:10px;gap:3px}.header nav{flex-basis:100%;justify-content:space-between;gap:8px}.header nav a{padding:5px 0}.technical-detail summary{display:block;position:relative;padding-right:22px}.technical-detail summary::after{position:absolute;right:0;top:24px}}
 
 #publication-info{text-align:center;margin:28px auto 38px;max-width:970px}.author-list{font-size:18px;line-height:1.9;margin-bottom:12px}.author-list sup,.affiliation-list sup{font-size:11px;margin-left:2px}.affiliation-list{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 22px;font-size:14px;color:var(--muted)}.correspondence-note{font-size:12px;margin:12px 0 20px}@media(max-width:620px){.author-list{font-size:16px}.affiliation-list{display:grid;font-size:12px}}
+
+.publication-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
